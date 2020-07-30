@@ -1,8 +1,8 @@
 #!/bin/bash
-echo "Copying certs to /etc/ssl/certs/ ...."
-sudo mv /tmp/etc/ssl/certs/*.* /etc/ssl/certs/
-sudo chown  root:root -R /etc/ssl/certs/
-sudo chmod  777 -R /etc/ssl/certs/
+#echo "Copying certs to /etc/ssl/certs/ ...."
+#sudo mv /tmp/etc/ssl/certs/*.* /etc/ssl/certs/
+#sudo chown  root:root -R /etc/ssl/certs/
+#sudo chmod  777 -R /etc/ssl/certs/
 echo "Copying nginx keys to /etc/ssl/ ...."
 sudo mv /tmp/etc/ssl/nginx /etc/ssl/
 sudo chown  root:root -R /etc/ssl/nginx/
