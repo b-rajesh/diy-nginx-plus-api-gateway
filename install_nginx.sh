@@ -26,4 +26,5 @@ sudo ln -s /usr/lib/nginx/modules /etc/nginx/modules
 sudo chown  root:root -R /etc/nginx/
 sudo chmod  777 -R /etc/nginx/
 sudo nginx -t -c /etc/nginx/nginx.conf
+echo "Restarting nginx ...."
 sudo service nginx restart
