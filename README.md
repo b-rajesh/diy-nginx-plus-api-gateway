@@ -2,8 +2,8 @@
 
 ### Pre-requisite
 
-1. If you are planning to run nginx plus as apigateway then copy nginx plus license nginx-repo.crt & nginx-repo.key to /etc/ssl/nginx/
-2. If you are planning to run nginx oss as apigateway then you don't need nginx plus license, however you will have to inspect the conf files inside to remove 
+   1. If you are planning to run nginx plus as apigateway then copy nginx plus license nginx-repo.crt & nginx-repo.key to /etc/ssl/nginx/
+   2. If you are planning to run nginx oss as apigateway then you don't need nginx plus license, however you will have to inspect the conf files inside to remove 
    certain directive which pertains to nginx plus. I have highlighted those directives with comments in the conf files.
 
 
@@ -66,5 +66,7 @@ $ docker stop | docker ps | grep mynginxplus_simple
 
 # To remoe  the nginxplus iamge
 $ docker rmi nginx-plus-api-gateway-simple
-
 ```
+
+### What's in the folder structure
+![alt text](image/Folders.png)
