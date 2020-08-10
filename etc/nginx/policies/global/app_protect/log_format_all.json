@@ -1,0 +1,11 @@
+{
+    "filter": {
+        "request_type": "all"
+    },
+    "content": {
+        "format": "user-defined",
+        "format_string": "client_ip=%ip_client%,client_port=%src_port%,request=%request%,violations=%violations%,signature_ids=%sig_ids%",
+        "max_request_size": "any",
+        "max_message_size": "10k"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "filter": {
+        "request_type": "illegal"
+    },
+    "content": {
+        "format": "user-defined",
+        "format_string": "Request ID %support_id%: %method% %uri% received on %date_time% from IP %ip_client% had the following violations: %violations%",
+        "max_request_size": "any",
+        "max_message_size": "5k"
+    }
+}

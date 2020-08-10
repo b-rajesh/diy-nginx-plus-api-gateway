@@ -1,11 +1,15 @@
 # diy-nginx-plus-api-gateway - build a opinionated APIGateway
 
-### Pre-requisite
+## Pre-requisites
 
+### Obtain the NGINX Plus license :
+```
    1. If you are planning to run nginx plus as apigateway then copy nginx plus license nginx-repo.crt & nginx-repo.key to /etc/ssl/nginx/
    2. If you are planning to run nginx oss as apigateway then you don't need nginx plus license, however you will have to inspect the conf files inside to remove 
    certain directive which pertains to nginx plus. I have highlighted those directives with comments in the conf files.
+```
 
+## Run NGINX Plus docker container
 
 ### Build an image from your Dockerfile :
 
@@ -16,14 +20,14 @@ $ docker build -t nginx-plus-api-gateway-simple .
 $ docker build -t nginx-plus-api-gateway-simple . --no-cache
 ```
 
-### Start the Nginx Plus container, e.g :
+### Start the Nginx Plus container :
 
 ```bash
 # Start a new container and publish container ports 80 (HTTP), 443 (HTTPS), 8000 (Demo instructions) and 8080 (NGINX Plus Dashboard) to the host
 $ docker run --name mynginxplus_simple  -p 80:80 -p 443:443 -p 8080:8080 -p 8000:8000 -p 9000:9000 -d nginx-plus-api-gateway-simple
 ```
 
-### Access NGiNX Plus Dashbaord:
+### Access NGiNX Plus Dashbaord :
 
 ```bash
 # Open your favourite dashboard and enter the below url

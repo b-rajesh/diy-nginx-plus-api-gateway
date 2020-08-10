@@ -1,5 +1,5 @@
 #For Debian 9
-FROM debian:buster-slim
+FROM debian:stretch-slim
 
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
 COPY etc/ssl/nginx/nginx-repo.crt /etc/ssl/nginx/
@@ -35,6 +35,7 @@ RUN set -x \
   # See https://www.nginx.com/products/nginx/modules
   # Required for this demo:
   && apt-get install -y nginx-plus-module-njs \
+  #&& apt-get install -y app-protect \
   && apt-get install -y nginx-plus-module-opentracing \
   && apt-get install nginx-plus-module-headers-more \
   # Optional, not required:
@@ -57,10 +58,11 @@ RUN chown -R nginx:nginx /etc/nginx \
  # Forward request logs to docker log collector
  && ln -sf /dev/stdout /var/log/nginx/access.log \
  && ln -sf /dev/stderr /var/log/nginx/error.log
-
+#COPY entrypoint.sh  ./
 RUN chmod -R 755 /etc/nginx 
 
 # EXPOSE ports, HTTP 80, HTTPS 443 and, Nginx status page 8080
 EXPOSE 80 443 8080 9000
 STOPSIGNAL SIGTERM
+#CMD ["sh", "/entrypoint.sh"] 
 CMD ["nginx", "-g", "daemon off;"]
