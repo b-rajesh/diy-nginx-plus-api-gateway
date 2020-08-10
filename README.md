@@ -74,3 +74,6 @@ $ docker rmi nginx-plus-api-gateway-simple
 
 ### What's in the folder structure
 ![alt text](image/Folders.png)
+
+### Policies folder structure
+![alt text](image/Policy_Folders.png)
